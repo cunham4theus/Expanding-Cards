@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #181818;
+  font-family: "Josefin Sans", sans-serif;
+  color: #eeecec;
+}
+
+a {
+  text-decoration: none;
+}
+
+.projects {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.projects__card {
+  position: relative;
+}
+
+.projects__card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  background-color: #0f0f0f;
+  height: 300px;
+}
+
+.projects__card-container img {
+  object-fit: cover;
+  width: 500px;
+  height: max-content;
+  transition: all 0.3s ease;
+  object-position: center;
+}
+
+.projects__card-container .btn {
+  position: absolute;
+  bottom: 20px;
+  color: #eeecec;
+  z-index: 20;
+  font-size: 20px;
+  animation: fadeIn 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  padding: 10px 30px;
+  box-shadow: 0 0 15px #181818;
+  background-color: #181818;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.projects__card-container .btn:hover {
+  color: #181818;
+  background-color: #eeecec;
+  box-shadow: 0 0 10px #eeecec;
+}
+
+.projects__card-container:not(:target) img {
+  width: 60px;
+  height: 320px;
+}
+
+.projects__card-container:not(:target) .btn {
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
